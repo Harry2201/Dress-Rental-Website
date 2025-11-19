@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Royale Rent | Designer Dress Rentals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <div class="logo">RoyaleRent</div>
+        <div class="nav-links">
+          <a href="#collections">Collections</a>
+          <a href="#how-it-works">How it Works</a>
+          <a href="#testimonials">Stories</a>
+          <button class="link-btn nav-catalog" data-open-catalog="women">Women</button>
+          <button class="link-btn nav-catalog" data-open-catalog="men">Men</button>
+          <button class="btn ghost">Sign In</button>
+          <button class="btn">Book a Look</button>
+        </div>
+      </nav>
+      <div class="hero-content">
+        <div class="hero-copy">
+          <p class="eyebrow">Runway curated · Luxury on demand</p>
+          <h1>Rent runway-ready couture in royal hues</h1>
+          <p>
+            Choose from handpicked collections of designer gowns, lehengas, and
+            cocktail dresses. Delivered steamed, accessorized, and ready to
+            shine for every milestone.
+          </p>
+          <div class="hero-actions">
+            <button class="btn">Explore Capsules</button>
+            <button class="btn ghost">Try Virtual Styling</button>
+          </div>
+          <ul class="stats">
+            <li>
+              <strong>2K+</strong>
+              <span>Premium dresses</span>
+            </li>
+            <li>
+              <strong>4.9/5</strong>
+              <span>Joy rating</span>
+            </li>
+            <li>
+              <strong>48 hrs</strong>
+              <span>Doorstep delivery</span>
+            </li>
+          </ul>
+        </div>
+        <div class="hero-card">
+          <div class="tag">New Capsule · Winter Royal</div>
+          <h3>Velvet Midnight Collection</h3>
+          <p>
+            Jewel-toned gowns crafted in silk velvet, inspired by palace soirées
+            from Jaipur to Jodhpur.
+          </p>
+          <div class="card-row">
+            <div class="card-item">
+              <span>Price</span>
+              <strong>₹2,999 / 3 days</strong>
+            </div>
+            <div class="card-item">
+              <span>Sizes</span>
+              <strong>XS - XXL</strong>
+            </div>
+          </div>
+          <button class="btn full">Reserve now</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="collections" class="collections">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Trending wardrobes</p>
+            <h2>Featured dress edits</h2>
+          </div>
+          <button class="link-btn">View all capsules →</button>
+        </div>
+        <div class="card-grid">
+          <article class="dress-card">
+            <img src="https://images.unsplash.com/photo-1475180098004-ca77a66827be?auto=format&fit=crop&w=600&q=80" alt="Cocktail dress" />
+            <div class="card-body">
+              <p class="tag">Cocktail Club</p>
+              <h3>Galaxy sequin column gown</h3>
+              <p class="price">₹2,499 for 4 days</p>
+              <button class="btn ghost">Rent look</button>
+            </div>
+          </article>
+          <article class="dress-card">
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80" alt="Wedding lehenga" />
+            <div class="card-body">
+              <p class="tag">Heritage Baraat</p>
+              <h3>Regal zardosi lehenga</h3>
+              <p class="price">₹4,999 for 5 days</p>
+              <button class="btn ghost">Rent look</button>
+            </div>
+          </article>
+          <article class="dress-card">
+            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=600&q=80" alt="Bridesmaid dress" />
+            <div class="card-body">
+              <p class="tag">Bridesmaid Bloom</p>
+              <h3>Plum satin wrap dress</h3>
+              <p class="price">₹1,899 for 3 days</p>
+              <button class="btn ghost">Rent look</button>
+            </div>
+          </article>
+          <article class="dress-card">
+            <img src="https://images.unsplash.com/photo-1490111718993-d98654ce6cf7?auto=format&fit=crop&w=600&q=80" alt="Festival saree" />
+            <div class="card-body">
+              <p class="tag">Festive Royale</p>
+              <h3>Banarasi ombré saree</h3>
+              <p class="price">₹2,299 for 4 days</p>
+              <button class="btn ghost">Rent look</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="catalog" class="catalog" aria-hidden="true">
+        <div class="catalog-shell">
+        <div class="catalog-top">
+          <div>
+            <p class="eyebrow">Full wardrobe</p>
+            <h2>Browse women's & men's rentals</h2>
+          </div>
+          <div class="catalog-tabs">
+            <button class="catalog-tab active" data-panel-trigger="women">Women</button>
+            <button class="catalog-tab" data-panel-trigger="men">Men</button>
+          </div>
+          <button class="close-modal" aria-label="Close wardrobe overlay">&times;</button>
+          <div class="search-bar">
+            <label for="inventory-search" class="sr-only">Search inventory</label>
+            <input
+              type="search"
+              id="inventory-search"
+              placeholder="Search by color, style, or occasion..."
+            />
+            <span class="search-icon">🔍</span>
+          </div>
+        </div>
+
+        <div class="catalog-group" data-panel="women">
+          <div class="group-head">
+            <h3>Women's Royale Rail</h3>
+            <p>Twenty couture edits perfect for weddings, cocktails, and galas.</p>
+          </div>
+          <div class="inventory-grid">
+            <article class="inventory-card" data-category="women" data-name="Crimson Mirror Lehenga" data-tags="lehenga wedding mirror crimson">
+              <img src="https://images.unsplash.com/photo-1490111718993-d98654ce6cf7?auto=format&fit=crop&w=600&q=80" alt="Crimson Mirror Lehenga" />
+              <div class="card-body">
+                <p class="tag">Wedding</p>
+                <h4>Crimson Mirror Lehenga</h4>
+                <p class="price">₹5,499 · 5 days</p>
+                <p class="card-note">Mirror-work blouse with dupatta</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="women" data-name="Midnight Sequin Column" data-tags="gown sequin midnight cocktail">
+              <img src="https://images.unsplash.com/photo-1475180098004-ca77a66827be?auto=format&fit=crop&w=600&q=80" alt="Midnight Sequin Column Gown" />
+              <div class="card-body">
+                <p class="tag">Cocktail</p>
+                <h4>Midnight Sequin Column</h4>
+                <p class="price">₹3,299 · 4 days</p>
+                <p class="card-note">Includes statement belt</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="women" data-name="Rose Quartz Cocktail Saree" data-tags="saree blush rose cocktail drape">
+              <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80" alt="Rose Quartz Cocktail Saree" />
+              <div class="card-body">
+                <p class="tag">Cocktail</p>
+                <h4>Rose Quartz Cocktail Saree</h4>
+                <p class="price">₹2,899 · 3 days</p>
+                <p class="card-note">Ready-to-wear pre-stitched drape</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="women" data-name="Imperial Emerald Gown" data-tags="gown emerald velvet gala">
+              <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=600&q=80" alt="Imperial Emerald Gown" />
+              <div class="card-body">
+                <p class="tag">Gala</p>
+                <h4>Imperial Emerald Gown</h4>
+                <p class="price">₹4,199 · 4 days</p>
+                <p class="card-note">Velvet bodice with cape sleeves</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="women" data-name="Saffron Bandhani Anarkali" data-tags="anarkali saffron haldi bandhani">
+              <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=600&q=80" alt="Saffron Bandhani Anarkali" />
+              <div class="card-body">
+                <p class="tag">Haldi</p>
+                <h4>Saffron Bandhani Anarkali</h4>
+                <p class="price">₹2,599 · 3 days</p>
+                <p class="card-note">Lightweight georgette swirl</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="women" data-name="Moonstone Cape Dress" data-tags="dress cape moonstone silver">
+              <img src="https://images.unsplash.com/photo-1456556906020-41523c7840c1?auto=format&fit=crop&w=600&q=80" alt="Moonstone Cape Dress" />
+              <div class="card-body">
+                <p class="tag">Reception</p>
+                <h4>Moonstone Cape Dress</h4>
+                <p class="price">₹3,499 · 4 days</p>
+                <p class="card-note">Detachable pearl cape</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="women" data-name="Amethyst Tulle Ball Gown" data-tags="ball gown amethyst tulle">
+              <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" alt="Amethyst Tulle Ball Gown" />
+              <div class="card-body">
+                <p class="tag">Black tie</p>
+                <h4>Amethyst Tulle Ball Gown</h4>
+                <p class="price">₹4,799 · 5 days</p>
+                <p class="card-note">Layered crinoline volume</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="women" data-name="Goldleaf Sharara Set" data-tags="sharara goldleaf mehendi">
+              <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80" alt="Goldleaf Sharara Set" />
+              <div class="card-body">
+                <p class="tag">Mehendi</p>
+                <h4>Goldleaf Sharara Set</h4>
+                <p class="price">₹2,799 · 3 days</p>
+                <p class="card-note">Scalloped dupatta included</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="women" data-name="Ivory Pearl Reception Gown" data-tags="gown ivory pearl reception">
+              <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=600&q=80" alt="Ivory Pearl Reception Gown" />
+              <div class="card-body">
+                <p class="tag">Reception</p>
+                <h4>Ivory Pearl Reception Gown</h4>
+                <p class="price">₹3,899 · 4 days</p>
+                <p class="card-note">Hand beaded neckline</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="women" data-name="Sapphire Ruffle Saree" data-tags="saree sapphire ruffle cocktail">
+              <img src="https://images.unsplash.com/photo-1509310202269-234c4b3d434c?auto=format&fit=crop&w=600&q=80" alt="Sapphire Ruffle Saree" />
+              <div class="card-body">
+                <p class="tag">Cocktail</p>
+                <h4>Sapphire Ruffle Saree</h4>
+                <p class="price">₹2,999 · 4 days</p>
+                <p class="card-note">Pre-stitched ruffle layers</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="women" data-name="Plum Velvet Mermaid" data-tags="gown plum velvet mermaid">
+              <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=600&q=80" alt="Plum Velvet Mermaid Gown" />
+              <div class="card-body">
+                <p class="tag">Evening</p>
+                <h4>Plum Velvet Mermaid</h4>
+                <p class="price">₹3,199 · 4 days</p>
+                <p class="card-note">Corseted waistline</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="women" data-name="Coral Ombré Lehenga" data-tags="lehenga coral ombre sangeet">
+              <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=600&q=80" alt="Coral Ombré Lehenga" />
+              <div class="card-body">
+                <p class="tag">Sangeet</p>
+                <h4>Coral Ombré Lehenga</h4>
+                <p class="price">₹3,799 · 4 days</p>
+                <p class="card-note">Mirror tassel belt</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="women" data-name="Blush Feather Mini" data-tags="mini dress blush feather party">
+              <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=600&q=80" alt="Blush Feather Mini Dress" />
+              <div class="card-body">
+                <p class="tag">Party</p>
+                <h4>Blush Feather Mini</h4>
+                <p class="price">₹1,999 · 3 days</p>
+                <p class="card-note">Crystal strap detail</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="women" data-name="Champagne Trail Gown" data-tags="gown champagne trail reception">
+              <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=600&q=80" alt="Champagne Trail Gown" />
+              <div class="card-body">
+                <p class="tag">Reception</p>
+                <h4>Champagne Trail Gown</h4>
+                <p class="price">₹4,399 · 5 days</p>
+                <p class="card-note">Detachable cathedral train</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="women" data-name="Indigo Patola Lehenga" data-tags="lehenga patola indigo traditional">
+              <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=600&q=80" alt="Indigo Patola Lehenga" />
+              <div class="card-body">
+                <p class="tag">Traditional</p>
+                <h4>Indigo Patola Lehenga</h4>
+                <p class="price">₹3,299 · 4 days</p>
+                <p class="card-note">Handloom patola weave</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="women" data-name="Lavender Fringe Slip" data-tags="dress lavender fringe cocktail">
+              <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=600&q=80" alt="Lavender Fringe Slip Dress" />
+              <div class="card-body">
+                <p class="tag">Cocktail</p>
+                <h4>Lavender Fringe Slip</h4>
+                <p class="price">₹2,199 · 3 days</p>
+                <p class="card-note">Bias-cut satin base</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="women" data-name="Teal Brocade Suit" data-tags="suit brocade teal reception power suit">
+              <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=600&q=80" alt="Teal Brocade Suit" />
+              <div class="card-body">
+                <p class="tag">Power suit</p>
+                <h4>Teal Brocade Suit</h4>
+                <p class="price">₹2,899 · 3 days</p>
+                <p class="card-note">Wide-leg trousers, bralette</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="women" data-name="Marigold Haldi Lehenga" data-tags="lehenga haldi marigold yellow">
+              <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=600&q=80" alt="Marigold Haldi Lehenga" />
+              <div class="card-body">
+                <p class="tag">Haldi</p>
+                <h4>Marigold Haldi Lehenga</h4>
+                <p class="price">₹2,499 · 3 days</p>
+                <p class="card-note">Heritage gota patti</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="women" data-name="Noir Crystal Jumpsuit" data-tags="jumpsuit noir crystal party">
+              <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=600&q=80" alt="Noir Crystal Jumpsuit" />
+              <div class="card-body">
+                <p class="tag">Party</p>
+                <h4>Noir Crystal Jumpsuit</h4>
+                <p class="price">₹2,299 · 3 days</p>
+                <p class="card-note">Power shoulders with crystals</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="women" data-name="Silver Dew Saree" data-tags="saree silver dew shimmer">
+              <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80" alt="Silver Dew Saree" />
+              <div class="card-body">
+                <p class="tag">Evening</p>
+                <h4>Silver Dew Saree</h4>
+                <p class="price">₹2,699 · 3 days</p>
+                <p class="card-note">All-over shimmer pleats</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="women" data-name="Jade Cape Lehenga" data-tags="lehenga jade cape contemporary">
+              <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" alt="Jade Cape Lehenga" />
+              <div class="card-body">
+                <p class="tag">Contemporary</p>
+                <h4>Jade Cape Lehenga</h4>
+                <p class="price">₹3,499 · 4 days</p>
+                <p class="card-note">Attached cape blouse</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="catalog-group hidden" data-panel="men">
+          <div class="group-head">
+            <h3>Men's Couture Rack</h3>
+            <p>Twenty heritage-inspired menswear ensembles tailored to rent.</p>
+          </div>
+          <div class="inventory-grid">
+            <article class="inventory-card" data-category="men" data-name="Imperial Gold Sherwani" data-tags="sherwani gold wedding">
+              <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80" alt="Imperial Gold Sherwani" />
+              <div class="card-body">
+                <p class="tag">Wedding</p>
+                <h4>Imperial Gold Sherwani</h4>
+                <p class="price">₹4,999 · 5 days</p>
+                <p class="card-note">Hand zardosi with stole</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="men" data-name="Midnight Bandhgala Suit" data-tags="bandhgala midnight suit cocktail">
+              <img src="https://images.unsplash.com/photo-1475180098004-ca77a66827be?auto=format&fit=crop&w=600&q=80" alt="Midnight Bandhgala Suit" />
+              <div class="card-body">
+                <p class="tag">Cocktail</p>
+                <h4>Midnight Bandhgala Suit</h4>
+                <p class="price">₹3,199 · 4 days</p>
+                <p class="card-note">Contrast pocket square set</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="men" data-name="Royal Navy Tuxedo" data-tags="tuxedo navy gala">
+              <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" alt="Royal Navy Tuxedo" />
+              <div class="card-body">
+                <p class="tag">Gala</p>
+                <h4>Royal Navy Tuxedo</h4>
+                <p class="price">₹3,599 · 4 days</p>
+                <p class="card-note">Luxury satin lapel</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="men" data-name="Ivory Angrakha Set" data-tags="angrakha ivory mehendi">
+              <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" alt="Ivory Angrakha Set" />
+              <div class="card-body">
+                <p class="tag">Mehendi</p>
+                <h4>Ivory Angrakha Set</h4>
+                <p class="price">₹2,699 · 3 days</p>
+                <p class="card-note">Paired with churidar</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="men" data-name="Emerald Velvet Jodhpuri" data-tags="velvet jodhpuri emerald reception">
+              <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" alt="Emerald Velvet Jodhpuri" />
+              <div class="card-body">
+                <p class="tag">Reception</p>
+                <h4>Emerald Velvet Jodhpuri</h4>
+                <p class="price">₹3,299 · 4 days</p>
+                <p class="card-note">Metal crest buttons</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="men" data-name="Classic Ivory Sherwani" data-tags="sherwani ivory wedding">
+              <img src="https://images.unsplash.com/photo-1490111718993-d98654ce6cf7?auto=format&fit=crop&w=600&q=80" alt="Classic Ivory Sherwani" />
+              <div class="card-body">
+                <p class="tag">Wedding</p>
+                <h4>Classic Ivory Sherwani</h4>
+                <p class="price">₹4,299 · 5 days</p>
+                <p class="card-note">Matching safa & mojari</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="men" data-name="Heritage Patola Kurta" data-tags="kurta patola festive">
+              <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=600&q=80" alt="Heritage Patola Kurta" />
+              <div class="card-body">
+                <p class="tag">Festive</p>
+                <h4>Heritage Patola Kurta</h4>
+                <p class="price">₹1,899 · 3 days</p>
+                <p class="card-note">Handloom weave</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="men" data-name="Noir Velvet Bandhgala" data-tags="bandhgala noir velvet">
+              <img src="https://images.unsplash.com/photo-1456556906020-41523c7840c1?auto=format&fit=crop&w=600&q=80" alt="Noir Velvet Bandhgala" />
+              <div class="card-body">
+                <p class="tag">Evening</p>
+                <h4>Noir Velvet Bandhgala</h4>
+                <p class="price">₹3,099 · 4 days</p>
+                <p class="card-note">Tonal embroidery</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="men" data-name="Indigo Linen Kurta Set" data-tags="kurta indigo linen day">
+              <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=600&q=80" alt="Indigo Linen Kurta Set" />
+              <div class="card-body">
+                <p class="tag">Day event</p>
+                <h4>Indigo Linen Kurta Set</h4>
+                <p class="price">₹1,499 · 2 days</p>
+                <p class="card-note">Breathable resort wear</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="men" data-name="Saffron Nehru Jacket" data-tags="nehru jacket saffron haldi">
+              <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" alt="Saffron Nehru Jacket" />
+              <div class="card-body">
+                <p class="tag">Haldi</p>
+                <h4>Saffron Nehru Jacket</h4>
+                <p class="price">₹1,799 · 2 days</p>
+                <p class="card-note">Comes with kurta set</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="men" data-name="Cobalt Tuxedo Set" data-tags="tuxedo cobalt formal">
+              <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" alt="Cobalt Tuxedo Set" />
+              <div class="card-body">
+                <p class="tag">Formal</p>
+                <h4>Cobalt Tuxedo Set</h4>
+                <p class="price">₹3,299 · 4 days</p>
+                <p class="card-note">Includes bow tie</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="men" data-name="Teal Achkan Ensemble" data-tags="achkan teal wedding">
+              <img src="https://images.unsplash.com/photo-1475180098004-ca77a66827be?auto=format&fit=crop&w=600&q=80" alt="Teal Achkan Ensemble" />
+              <div class="card-body">
+                <p class="tag">Wedding</p>
+                <h4>Teal Achkan Ensemble</h4>
+                <p class="price">₹3,699 · 4 days</p>
+                <p class="card-note">Hand embroidered collar</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="men" data-name="Pearl White Kurta Jacket" data-tags="kurta jacket pearl white engagement">
+              <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80" alt="Pearl White Kurta Jacket" />
+              <div class="card-body">
+                <p class="tag">Engagement</p>
+                <h4>Pearl White Kurta Jacket</h4>
+                <p class="price">₹2,199 · 3 days</p>
+                <p class="card-note">Light embroidered jacket</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="men" data-name="Ebony Kurta with Dupatta" data-tags="kurta ebony dupatta sangeet">
+              <img src="https://images.unsplash.com/photo-1475180098004-ca77a66827be?auto=format&fit=crop&w=600&q=80" alt="Ebony Kurta with Dupatta" />
+              <div class="card-body">
+                <p class="tag">Sangeet</p>
+                <h4>Ebony Kurta with Dupatta</h4>
+                <p class="price">₹2,099 · 3 days</p>
+                <p class="card-note">Thread-work yoke</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="men" data-name="Gunmetal Bandhgala" data-tags="bandhgala gunmetal evening">
+              <img src="https://images.unsplash.com/photo-1456556906020-41523c7840c1?auto=format&fit=crop&w=600&q=80" alt="Gunmetal Bandhgala" />
+              <div class="card-body">
+                <p class="tag">Evening</p>
+                <h4>Gunmetal Bandhgala</h4>
+                <p class="price">₹3,099 · 4 days</p>
+                <p class="card-note">Subtle sheen base</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="men" data-name="Forest Green Kurta Set" data-tags="kurta forest green festive">
+              <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=600&q=80" alt="Forest Green Kurta Set" />
+              <div class="card-body">
+                <p class="tag">Festive</p>
+                <h4>Forest Green Kurta Set</h4>
+                <p class="price">₹1,799 · 2 days</p>
+                <p class="card-note">Chikankari details</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="men" data-name="Marble Grey Suit" data-tags="suit marble grey formal">
+              <img src="https://images.unsplash.com/photo-1475180098004-ca77a66827be?auto=format&fit=crop&w=600&q=80" alt="Marble Grey Suit" />
+              <div class="card-body">
+                <p class="tag">Formal</p>
+                <h4>Marble Grey Suit</h4>
+                <p class="price">₹2,999 · 4 days</p>
+                <p class="card-note">Two-button slim fit</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="men" data-name="Desert Sand Sherwani" data-tags="sherwani desert sand destination">
+              <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80" alt="Desert Sand Sherwani" />
+              <div class="card-body">
+                <p class="tag">Destination</p>
+                <h4>Desert Sand Sherwani</h4>
+                <p class="price">₹4,199 · 5 days</p>
+                <p class="card-note">Resort-friendly fabric</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="men" data-name="Azure Kurta with Bundi" data-tags="kurta azure bundi mehendi">
+              <img src="https://images.unsplash.com/photo-1475180098004-ca77a66827be?auto=format&fit=crop&w=600&q=80" alt="Azure Kurta with Bundi" />
+              <div class="card-body">
+                <p class="tag">Mehendi</p>
+                <h4>Azure Kurta with Bundi</h4>
+                <p class="price">₹1,899 · 3 days</p>
+                <p class="card-note">Block-printed bundi</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="men" data-name="Midnight Velvet Sherwani" data-tags="sherwani midnight velvet">
+              <img src="https://images.unsplash.com/photo-1456556906020-41523c7840c1?auto=format&fit=crop&w=600&q=80" alt="Midnight Velvet Sherwani" />
+              <div class="card-body">
+                <p class="tag">Reception</p>
+                <h4>Midnight Velvet Sherwani</h4>
+                <p class="price">₹4,399 · 5 days</p>
+                <p class="card-note">Antique gold buttons</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="men" data-name="Onyx Three-Piece Suit" data-tags="suit onyx black tie">
+              <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" alt="Onyx Three-Piece Suit" />
+              <div class="card-body">
+                <p class="tag">Black tie</p>
+                <h4>Onyx Three-Piece Suit</h4>
+                <p class="price">₹3,499 · 4 days</p>
+                <p class="card-note">Includes waistcoat</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="men" data-name="Slate Kurta with Stole" data-tags="kurta slate stole pooja">
+              <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80" alt="Slate Kurta with Stole" />
+              <div class="card-body">
+                <p class="tag">Pooja</p>
+                <h4>Slate Kurta with Stole</h4>
+                <p class="price">₹1,599 · 2 days</p>
+                <p class="card-note">Cotton silk comfort</p>
+              </div>
+            </article>
+            <article class="inventory-card" data-category="men" data-name="Regal Brocade Sherwani" data-tags="sherwani brocade regal royal">
+              <img src="https://images.unsplash.com/photo-1475180098004-ca77a66827be?auto=format&fit=crop&w=600&q=80" alt="Regal Brocade Sherwani" />
+              <div class="card-body">
+                <p class="tag">Royal</p>
+                <h4>Regal Brocade Sherwani</h4>
+                <p class="price">₹5,199 · 5 days</p>
+                <p class="card-note">Brocade with stole</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <section class="curation">
+        <div class="curation-copy">
+          <p class="eyebrow">Signature stylists</p>
+          <h2>Looks curated by seasoned runway trend editors</h2>
+          <p>
+            Skip the guesswork. Every Royale Rent look arrives with accessory
+            pairings, fit notes, and style hacks tested on real celebrations.
+          </p>
+          <ul>
+            <li>Personal stylist consult in 15 minutes</li>
+            <li>No-cost size swap up to 24 hours before your event</li>
+            <li>Complimentary bling kit & finishing spray</li>
+          </ul>
+        </div>
+        <div class="curation-card">
+          <div class="curation-header">
+            <span>New drop</span>
+            <strong>Royal soirée trunks</strong>
+          </div>
+          <p>
+            Limited-edition garment trunks with robes, footwear, and curated
+            jewelry for luxury destination weddings.
+          </p>
+          <button class="btn full">Join waitlist</button>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="steps">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">3-day flow</p>
+            <h2>How renting feels effortless</h2>
+          </div>
+          <button class="link-btn">Need help? Chat with us</button>
+        </div>
+        <div class="steps-grid">
+          <article>
+            <span class="step-number">01</span>
+            <h3>Discover</h3>
+            <p>Select your vibe, size, and event date. We reserve your edit and prep it at our royal studio.</p>
+          </article>
+          <article>
+            <span class="step-number">02</span>
+            <h3>Deliver</h3>
+            <p>Looks arrive steamed with accessory kit, double-boxed in reusable luxe packaging.</p>
+          </article>
+          <article>
+            <span class="step-number">03</span>
+            <h3>Return</h3>
+            <p>Schedule pickup in one tap. We handle the dry cleaning and garment spa.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="split">
+        <div class="split-card">
+          <h3>Royal Rewards</h3>
+          <p>
+            Earn crowns every time you rent. Unlock complimentary rentals,
+            studio trials, and early access to couture drops.
+          </p>
+          <button class="btn ghost">View tiers</button>
+        </div>
+        <div class="split-card gradient">
+          <h3>Try at Home</h3>
+          <p>2 looks · 24 hours · door delivery . ₹699 styling fee waived at booking.</p>
+          <button class="btn">Book session</button>
+        </div>
+      </section>
+
+      <section id="testimonials" class="testimonials">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Real event magic</p>
+            <h2>Community stories</h2>
+          </div>
+          <div class="pill-tabs">
+            <button class="pill active">Weddings</button>
+            <button class="pill">Cocktail</button>
+            <button class="pill">Festive</button>
+          </div>
+        </div>
+        <div class="stories">
+          <article>
+            <p>
+              “My Jaipur mehendi look arrived with handwritten draping tips. I
+              felt like royalty without buying another heavy lehenga.”
+            </p>
+            <div class="story-meta">
+              <strong>Riya • PR lead</strong>
+              <span>Rented Heritage Baraat capsule</span>
+            </div>
+          </article>
+          <article>
+            <p>
+              “The stylist called me with backup jewelry ideas! Best rental
+              experience—felt as polished as a luxe runway drop.”
+            </p>
+            <div class="story-meta">
+              <strong>Natasha • Architect</strong>
+              <span>Rented Cocktail Club capsule</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <div class="logo">RoyaleRent</div>
+          <p>Luxury dress rentals inspired by the effortless polish of runway couture.</p>
+          <div class="socials">
+            <a href="#">Instagram</a>
+            <a href="#">Pinterest</a>
+            <a href="#">YouTube</a>
+          </div>
+        </div>
+        <div>
+          <h4>Get help</h4>
+          <a href="#">FAQs</a>
+          <a href="#">Care instructions</a>
+          <a href="#">Corporate gifting</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="#">About us</a>
+          <a href="#">Careers</a>
+          <a href="#">Press</a>
+        </div>
+        <div>
+          <h4>Stay in the loop</h4>
+          <form class="newsletter">
+            <input type="email" placeholder="Email address" />
+            <button class="btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <p class="footer-note">© 2025 Royale Rent. Crafted in Bengaluru.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
